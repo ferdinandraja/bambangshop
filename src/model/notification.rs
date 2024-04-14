@@ -1,4 +1,4 @@
-use rocket::sede::{Deserialize, Serialize};
+use rocket::serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Notification{
