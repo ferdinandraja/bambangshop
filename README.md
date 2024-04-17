@@ -77,7 +77,31 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+##### 1.
+In this scenario, we don't need to use trait, because there is only one relationship. However, for other case where there are multiple implementations, employing traits would be better.
+
+##### 2.
+Using Vec is not appropriate, because it will allow the key to be duplicated. On the other hand, DashMap can be used to guarantee unique id and URL enforcement.
+
+##### 3.
+DashMap is essential in this context, especially in a multi-threaded application, because we need to ensured thread safety when accessing the SUBSCRIBERS variable.
 
 #### Reflection Publisher-2
+##### 1. 
+We need to separate btoh service and repository is because they have different purpose in building a program. For service, they work on the businesses logic. On the other hand, repository works on the database.
+
+##### 2.
+If we only implement the model, the diffivulty of writing a code for a program will increase significantly, because we do everything in the model
+
+##### 3.
+Postman is great to help to test API. It is also great because it allows to manage cookies on a URL basis.
 
 #### Reflection Publisher-3
+##### 1.
+In this case, the Push model is utilized. The evidence is in the presence of the notify function for subscriber notification.
+
+##### 2.
+The Pull model offers the advantage of subscribers retrieving data only when needed, mitigating the risk of receiving unnecessary data.On the other hand, the potential drawbacks include the possibility of using stale data, leading to logic errors and inconsistency.
+
+##### 3.
+If we don't use multi-threading, notifying subscribers individually would be necessary, therefore it will make the operations run longer and hampering the perfoemance.
